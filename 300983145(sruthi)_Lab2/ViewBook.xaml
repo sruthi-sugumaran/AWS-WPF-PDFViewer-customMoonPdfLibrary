@@ -1,0 +1,54 @@
+﻿<Window x:Class="_300983145_sruthi__Lab2.ViewBook"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_300983145_sruthi__Lab2"
+        mc:Ignorable="d"
+        Title="ViewBook" Height="450" Width="800"
+        xmlns:mpp="clr-namespace:MoonPdfLib;assembly=MoonPdfLib">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Menu HorizontalAlignment = "Stretch" VerticalAlignment = "Top" Grid.Row="0">
+            <MenuItem Header = "Option" Grid.Column="2" HorizontalAlignment="Left">
+                <MenuItem Header = "Home" HorizontalAlignment = "Left" Width = "140" 
+               Click = "MenuItem_Click" />
+                <Separator HorizontalAlignment = "Left" Width = "140" />
+                <MenuItem Header = "SignOut" HorizontalAlignment = "Left" Width = "140" 
+               Click = "MenuItem_Click"/>
+            </MenuItem>
+        </Menu>
+        <Border Background="#d3d3d3" Grid.Row="1">
+            <mpp:MoonPdfPanel x:Name="moonPdfPanel" Background="LightGray" ViewType="SinglePage" PageRowDisplay="ContinuousPageRows" PageMargin="0,2,4,2" AllowDrop="True" Margin="0,0,0,32" Loaded="afterPanelLoaded"/>
+        </Border>
+        <Border Background="#f0f0f0" HorizontalAlignment="Stretch" Grid.Row="2">
+            <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Orientation="Horizontal">
+
+                <Button Content="Zoom up" Width="100" Click="ZoomInButton_Click" Margin="0,5"/>
+
+                <Button Content="Reduce" Width="100" Click="ZoomOutButton_Click" Margin="5,5"/>
+
+                <Button Content="100%" Width="100" Click="NormalButton_Click" Margin="0,5"/>
+
+                <Button Content="Full page" Width="100" Click="FitToHeightButton_Click" Margin="5,5"/>
+
+                <Button Content="single page" Width="100" Click="SinglePageButton_Click" Margin="0,5"/>
+
+                <Button Content="double page" Width="100" Click="FacingButton_Click" Margin="5,5"/>
+
+                <Button Content="Bookmark" Width="100" Click="BookmarkButton_Click" Margin="5,5"/>
+            </StackPanel>
+        </Border>
+        
+        
+       
+    </Grid>
+</Window>

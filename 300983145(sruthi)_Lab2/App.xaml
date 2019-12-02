@@ -1,0 +1,9 @@
+﻿
+    <Application x:Class="_300983145_sruthi__Lab2.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:_300983145_sruthi__Lab2"
+             StartupUri="Login.xaml">
+    <Application.Resources>
+    </Application.Resources>
+</Application>

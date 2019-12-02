@@ -1,0 +1,57 @@
+﻿<Window x:Class="_300983145_sruthi__Lab2.Welcome"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_300983145_sruthi__Lab2"
+        mc:Ignorable="d"
+       Title="Welcome" Height="450" Width="806">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Menu HorizontalAlignment = "Stretch" VerticalAlignment = "Top">
+            <MenuItem Header = "Option" Grid.Column="2" HorizontalAlignment="Left">
+                <MenuItem Header = "Home" HorizontalAlignment = "Left" Width = "140" 
+               Click = "MenuItem_Click" />
+                <Separator HorizontalAlignment = "Left" Width = "140" />
+                <MenuItem Header = "SignOut" HorizontalAlignment = "Left" Width = "140" 
+               Click = "MenuItem_Click"/>
+            </MenuItem>
+        </Menu>
+        <GridSplitter HorizontalAlignment="Left" Margin="523,0,0,0" Grid.Row="1" VerticalAlignment="Stretch" Width="5"/>
+        <ListView Name="listViewFiles" HorizontalAlignment="Left" Height="273" Margin="10,118,0,0" Grid.Row="1" VerticalAlignment="Top" Width="508"  MouseDoubleClick="ListView_MouseDoubleClick" Loaded="PDFBooksListLoaded" >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <StackPanel HorizontalAlignment="Center" Height="381" Margin="533,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="248" Background="WhiteSmoke">
+            <Rectangle Fill="WhiteSmoke" Height="45"/>
+            <Button Name="btnAddBook"  Content="Add book to shelf" Height="45" Margin="10,0" Click="BtnAddOnClick"/>
+            <Rectangle Fill="#FFF4F4F5" Height="10" Stroke="WhiteSmoke"/>
+            <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center" >
+                <Label Name="lblFileName" Content="" Background="WhiteSmoke"/>
+            </WrapPanel>
+            <Rectangle Fill="#FFF4F4F5" Height="10" Stroke="WhiteSmoke"/>
+            <Button Name="btnUpload"  Content="Upload" Height="45" Margin="10,0" Click="BtnUploadConfirmOnClick"/>
+            <Rectangle Fill="#FFF4F4F5" Height="10" Stroke="WhiteSmoke"/>
+            <Button Name="btnCancel" Content="Cancel" Height="45" Margin="10,0" Click="BtnUploadFileCancelClick"/>
+            <Rectangle Fill="#FFF4F4F5" Height="45" Stroke="WhiteSmoke"/>
+            <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Stretch">
+                <Label Content="Tip: Double Click Book to Start Reading" HorizontalAlignment="Stretch" VerticalAlignment="Center" Background="WhiteSmoke"/>
+            </WrapPanel>
+        </StackPanel>
+        <GridSplitter HorizontalAlignment="Left" Height="100" Margin="20,241,0,0" Grid.Row="1" VerticalAlignment="Top" Width="5"/>
+        <GridSplitter HorizontalAlignment="Left" Height="7" Margin="10,106,0,0" Grid.Row="1" VerticalAlignment="Top" Width="508"/>
+        <Label Content="Last Accessed Book: " HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Height="34" Width="140" FontSize="14"/>
+        <TextBlock Name="lblLatestBook"  HorizontalAlignment="Left" Margin="20,44,0,0" Grid.Row="1" IsEnabled="False" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="498" Height="57" FontSize="16"/>
+    </Grid>
+</Window>

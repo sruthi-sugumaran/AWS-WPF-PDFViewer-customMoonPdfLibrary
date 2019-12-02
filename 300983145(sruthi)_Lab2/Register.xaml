@@ -1,0 +1,20 @@
+﻿<Window x:Class="_300983145_sruthi__Lab2.Register"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_300983145_sruthi__Lab2"
+        mc:Ignorable="d"
+        Title="Register" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid Width="480">
+        <Label Content="Registration Form" FontSize="15" FontWeight="SemiBold" Foreground="Red" Height="35" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="71,27,0,0" Name="label3" VerticalAlignment="Top" Width="282" />
+        <TextBox BorderBrush="#FF1A0202" Height="23" HorizontalAlignment="Left" Margin="126,97,0,0" Name="txtemail" VerticalAlignment="Top" Width="246" TextChanged="modifyEmailField" />
+        <Label Content="Email ID :" FontSize="13" FontWeight="Bold" Foreground="#FF0062FF" Height="28" HorizontalAlignment="Left" Margin="51,92,0,0" Name="label1" VerticalAlignment="Top" />
+        <TextBox BorderBrush="#FF1A0202" Height="23" HorizontalAlignment="Left" Margin="126,139,0,0" Name="txtname" VerticalAlignment="Top" Width="246" />
+        <Label Content="Name :" FontSize="13" FontWeight="Bold" Foreground="#FF0062FF" Height="28" HorizontalAlignment="Left" Margin="66,134,0,0" Name="label2" VerticalAlignment="Top" />
+        <PasswordBox BorderBrush="#FF1A0202" Height="23" HorizontalAlignment="Left" Margin="126,180,0,0" Name="txtpassword" VerticalAlignment="Top" Width="246" />
+        <Label Content="Password :" FontSize="13" FontWeight="Bold" Foreground="#FF0062FF" Height="28" HorizontalAlignment="Left" Margin="44,177,0,0" Name="label4" VerticalAlignment="Top" />
+        <Button Content="Register" Height="23" HorizontalAlignment="Left" Margin="126,230,0,0" Name="btnreg" VerticalAlignment="Top" Width="246" Click="button1_Click" />
+        <Button Content="Back to Login" Height="23" HorizontalAlignment="Left" Margin="12,296,0,0" Name="btnbacktologin" VerticalAlignment="Top" Width="122" Click="button2_Click" />
+    </Grid>
+</Window>

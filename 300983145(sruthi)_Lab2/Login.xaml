@@ -1,0 +1,19 @@
+﻿<Window x:Class="_300983145_sruthi__Lab2.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_300983145_sruthi__Lab2"
+        mc:Ignorable="d"
+         Title="Login" Height="450" Width="800">
+    <Grid Height="390" Width="475">
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="130,104,0,0" Name="txtemail" VerticalAlignment="Top" Width="246" BorderBrush="#FF1A0202" TextChanged="modifyEmailField"/>
+        <PasswordBox Height="23" HorizontalAlignment="Left" Margin="130,144,0,0" Name="txtpassword" VerticalAlignment="Top" Width="246" BorderBrush="#FF1A0202" />
+        <Label Content="Email ID :" Height="28" HorizontalAlignment="Left" Margin="55,99,0,0" Name="label1" VerticalAlignment="Top" Foreground="#FF0062FF" FontSize="13" FontWeight="Bold" />
+        <Label Content="Password :" Height="28" HorizontalAlignment="Left" Margin="48,139,0,0" Name="label2" VerticalAlignment="Top" Foreground="#FF0062FF" FontSize="13" FontWeight="Bold" />
+        <Button Content="Login" Height="23" HorizontalAlignment="Left" Margin="130,192,0,0" Name="button1" VerticalAlignment="Top" Width="246" Click="button1_Click" />
+        <Label Content="Login Form" Height="35" HorizontalAlignment="Left" Margin="83,27,0,0" Name="label3" VerticalAlignment="Top" Width="282" HorizontalContentAlignment="Center" Foreground="Red" FontSize="15" FontWeight="SemiBold" />
+        <Label Content="New User" FontSize="13" FontWeight="Bold" Foreground="#FF0062FF" Height="28" HorizontalAlignment="Left" Margin="207,257,0,0" Name="label4" VerticalAlignment="Top" />
+        <Button Content="Register Here" Height="23" HorizontalAlignment="Left" Margin="282,262,0,0" Name="button2" VerticalAlignment="Top" Width="122" Click="button2_Click" />
+    </Grid>
+</Window>
